@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fi"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Laskin.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">laskinSecondTry</a> &gt; <a href="index.source.html" class="el_package">laskin</a> &gt; <span class="el_source">Laskin.java</span></div><h1>Laskin.java</h1><pre class="source lang-java linenums">package laskin;
+
+<span class="fc" id="L3">public class Laskin {</span>
+
+    private double result;
+
+    public void setZero() {
+<span class="fc" id="L8">        result = 0;</span>
+<span class="fc" id="L9">    }</span>
+
+    public double returnResult() {
+<span class="fc" id="L12">        return result;</span>
+    }
+
+    public void add(double n) {
+<span class="fc" id="L16">        result = result + n;</span>
+<span class="fc" id="L17">    }</span>
+
+    public void subtract(double n) {
+<span class="fc" id="L20">        result = result - n;</span>
+<span class="fc" id="L21">    }</span>
+
+    public void product(double n) {
+<span class="fc" id="L24">        result = result * n;</span>
+<span class="fc" id="L25">    }</span>
+
+    public void divide(int n) {
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (n == 0) {</span>
+<span class="fc" id="L29">            throw new ArithmeticException(&quot;division by zero&quot;);</span>
+        }
+<span class="fc" id="L31">        result /= n;</span>
+<span class="fc" id="L32">    }</span>
+
+    public void quadrilateral(double n) {
+<span class="fc" id="L35">        result = n * n;</span>
+<span class="fc" id="L36">    }</span>
+
+    public void squareroot(double n) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (n &lt; 0) {</span>
+<span class="fc" id="L40">            throw new IllegalArgumentException(&quot;Negative value!&quot;);</span>
+        }
+<span class="fc" id="L42">        result = Math.sqrt(n);</span>
+<span class="fc" id="L43">    }</span>
+
+    public void currentON() {
+        // Tähän voisi laittaa alkutoimet
+<span class="fc" id="L47">        result = 0;</span>
+<span class="fc" id="L48">    }</span>
+
+    public void currentOFF() {
+        // Tähän voisi laittaa lopputoimet
+<span class="fc" id="L52">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
